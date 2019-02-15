@@ -1,6 +1,6 @@
 fun main() {
-    println(7 divides 10 )
-    println((0..10).filter { it.isPrime() })
+    println(7 divides 10)
+    println((0..100).filter { it.isPrime() })
     println(primes.take(10).toList())
     println(goldbach(4))
     println("Goldbach widerlegt? => " + (4..100).step(2).any { goldbach(it).size == 0 })
@@ -24,11 +24,11 @@ fun Int.isPrime(): Boolean {
 infix fun Int.divides(i: Int) = i % this == 0
 
 fun goldbach(n: Int) =
-        primes.take(n/2)
-            .filter { it <= n/2 }
-            .filter { (n - it).isPrime() }
-            .map { Pair(it, n-it) }
-            .toList()
+    primes.take(n / 2)
+        .filter { it <= n / 2 }
+        .filter { (n - it).isPrime() }
+        .map { Pair(it, n - it) }
+        .toList()
 
 
 
