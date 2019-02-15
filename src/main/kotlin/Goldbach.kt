@@ -3,7 +3,7 @@ fun main() {
     println((0..10).filter { it.isPrime() })
     println(primes.take(10).toList())
     println(goldbach(4))
-    println((4..100).step(2).filter { goldbach(it).size == 0 })
+    println("Goldbach widerlegt => " + (4..100).step(2).any { goldbach(it).size == 0 })
 }
 
 val primes = sequence {
