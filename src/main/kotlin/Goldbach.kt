@@ -12,7 +12,7 @@ val primes = sequence {
     }
 }
 
-private fun Int.isPrime(): Boolean {
+fun Int.isPrime(): Boolean {
     return when {
         this in 0..1 -> false
         this == 2 -> true
