@@ -1,5 +1,5 @@
 fun main() {
-    val liste = listOf("Klaus", "Klaus", "Mann", "Helga", "Angelika", "Peter", "Hans", "Jürgen", "Stephan", "Boris")
+    val liste = listOf("Klaus", "Klaus", "Manfred", "Helga", "Angelika", "Peter", "Hans", "Jürgen", "Stephan", "Boris")
     println(liste
         .quicksort()
         .also { println("==========================") }

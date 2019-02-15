@@ -17,7 +17,7 @@ private fun Int.isPrime(): Boolean {
         this in 0..1 -> false
         this == 2 -> true
         2 divides this -> false
-        else -> (3 until this).any { it*it <= this && it divides this }.not()
+        else -> (3..this).any { it*it <= this && it divides this }.not()
     }
 }
 
